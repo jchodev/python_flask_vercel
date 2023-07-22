@@ -5,6 +5,10 @@ app = Flask(__name__)
 def home():
 	return "HELLO from vercel use flask"
 
+@app.route("/page2")
+def page2():
+	return "依個係第二頁作測試, this is page2 for testing"
+
 @app.route('/example', methods=['POST'])
 def example():
     if request.method == 'POST':
